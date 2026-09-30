@@ -1,0 +1,283 @@
+[0m17:57:55.597177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002235B8EACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022359684E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002235E47F9D0>]}
+
+
+============================== 17:57:55.643877 | 167da2d9-1050-44a2-9415-e6973e63e527 ==============================
+[0m17:57:55.643877 [info ] [MainThread]: Running with dbt=1.12.5
+[0m17:57:55.645314 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sam MSI\\.dbt', 'invocation_command': 'dbt init', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m17:58:23.712609 [debug] [MainThread]: Starter project path: C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\include\starter_project
+[0m17:58:23.755117 [info ] [MainThread]: Setting up your profile.
+[0m17:58:35.545316 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:58:35.545843 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:58:35.546187 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m17:58:47.450098 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m17:58:47.465971 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\cli\main.py", line 504, in init
+    results = task.run()
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 363, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 132, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\click\termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\click\termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:58:47.469101 [debug] [MainThread]: Command `dbt init` failed at 17:58:47.468737 after 52.36 seconds
+[0m17:58:47.469930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223603282B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223600583B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223600CAE00>]}
+[0m17:58:47.471277 [debug] [MainThread]: Flushing usage events
+[0m17:58:49.836266 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:59:01.508262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019EA68FACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019EA4694E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019EA949F9D0>]}
+
+
+============================== 17:59:01.529493 | c08795f9-2612-4fb9-b76a-4627079653eb ==============================
+[0m17:59:01.529493 [info ] [MainThread]: Running with dbt=1.12.5
+[0m17:59:01.530293 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sam MSI\\.dbt', 'invocation_command': 'dbt init', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m17:59:08.115130 [info ] [MainThread]: A project called oms_dbt_proj already exists here.
+[0m17:59:08.116351 [debug] [MainThread]: Command `dbt init` succeeded at 17:59:08.116180 after 7.01 seconds
+[0m17:59:08.116839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019EA940AB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019EA95E4710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019EA945DBF0>]}
+[0m17:59:08.117332 [debug] [MainThread]: Flushing usage events
+[0m17:59:09.098078 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:59:46.476860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219699CECF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219677B4E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002196C55F9D0>]}
+
+
+============================== 17:59:46.496122 | df631dc9-8728-4c01-addb-689a2195a44c ==============================
+[0m17:59:46.496122 [info ] [MainThread]: Running with dbt=1.12.5
+[0m17:59:46.497559 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sam MSI\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m17:59:52.482804 [debug] [MainThread]: Starter project path: C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\include\starter_project
+[0m17:59:52.500906 [info ] [MainThread]: Setting up your profile.
+[0m17:59:55.314560 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:59:55.315004 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:59:55.315295 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:16:07.183586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023099C3ECF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230979D4E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002309C7DF9D0>]}
+
+
+============================== 18:16:07.206157 | 6cdafdd4-c99c-493e-9bb1-fd317e32571a ==============================
+[0m18:16:07.206157 [info ] [MainThread]: Running with dbt=1.12.5
+[0m18:16:07.206768 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sam MSI\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m18:16:15.096346 [debug] [MainThread]: Starter project path: C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\include\starter_project
+[0m18:16:15.117331 [info ] [MainThread]: Setting up your profile.
+[0m18:16:20.801068 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:16:20.801514 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:16:20.801922 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:17:41.294627 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m18:17:41.307415 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\cli\main.py", line 504, in init
+    results = task.run()
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 363, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 119, in generate_target_from_input
+    target = self.generate_target_from_input(
+        profile_template_local[key][choice], target
+    )
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\task\init.py", line 132, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\click\termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\click\termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m18:17:41.311011 [debug] [MainThread]: Command `dbt init` failed at 18:17:41.310852 after 94.76 seconds
+[0m18:17:41.311441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002309E4C82B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002309E48E0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002309E26AE00>]}
+[0m18:17:41.311835 [debug] [MainThread]: Flushing usage events
+[0m18:17:42.415116 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:17:55.582068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BDBFBECF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BD9D54E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BDEB4F9D0>]}
+
+
+============================== 18:17:55.600657 | fe3a18b2-cc43-4a3c-97a3-c121d0beaef3 ==============================
+[0m18:17:55.600657 [info ] [MainThread]: Running with dbt=1.12.5
+[0m18:17:55.601522 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sam MSI\\.dbt', 'invocation_command': 'dbt init', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m18:17:59.660275 [debug] [MainThread]: Starter project path: C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Lib\site-packages\dbt\include\starter_project
+[0m18:17:59.679432 [info ] [MainThread]: Setting up your profile.
+[0m18:18:01.692465 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:18:01.693041 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:18:01.693384 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:20:38.756525 [info ] [MainThread]: Profile oms_prj written to C:\Users\Sam MSI\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m18:20:38.759632 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m18:20:38.760213 [info ] [MainThread]: dbt version: 1.12.5
+[0m18:20:38.760626 [info ] [MainThread]: python version: 3.14.7
+[0m18:20:38.760997 [info ] [MainThread]: python path: C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Scripts\python.exe
+[0m18:20:38.761434 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m18:20:38.852789 [info ] [MainThread]: Using profiles dir at C:\Users\Sam MSI\.dbt
+[0m18:20:38.853410 [info ] [MainThread]: Using profiles.yml file at C:\Users\Sam MSI\.dbt\profiles.yml
+[0m18:20:38.853911 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\oms_prj\dbt_project.yml
+[0m18:20:38.855222 [info ] [MainThread]: adapter type: snowflake
+[0m18:20:38.855695 [info ] [MainThread]: adapter version: 1.12.1
+[0m18:20:38.979229 [info ] [MainThread]: Configuration:
+[0m18:20:38.979856 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:20:38.980236 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:20:38.980578 [info ] [MainThread]: Required dependencies:
+[0m18:20:38.980916 [debug] [MainThread]: Executing "git --help"
+[0m18:20:39.035261 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:20:39.035770 [debug] [MainThread]: STDERR: "b''"
+[0m18:20:39.036175 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:20:39.036672 [info ] [MainThread]: Connection:
+[0m18:20:39.037102 [info ] [MainThread]:   account: ZOUAUHW-IJ51040
+[0m18:20:39.037487 [info ] [MainThread]:   user: samuel.auditama@gmail.com
+[0m18:20:39.037841 [info ] [MainThread]:   database: SLEEKMART_OMS
+[0m18:20:39.038208 [info ] [MainThread]:   warehouse: SNOWFLAKE_LEARNING_WH
+[0m18:20:39.038568 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m18:20:39.038860 [info ] [MainThread]:   schema: L3_CONSUMPTION
+[0m18:20:39.039123 [info ] [MainThread]:   authenticator: None
+[0m18:20:39.039376 [info ] [MainThread]:   oauth_client_id: None
+[0m18:20:39.039630 [info ] [MainThread]:   query_tag: None
+[0m18:20:39.039882 [info ] [MainThread]:   client_session_keep_alive: False
+[0m18:20:39.040142 [info ] [MainThread]:   host: None
+[0m18:20:39.040390 [info ] [MainThread]:   port: None
+[0m18:20:39.040636 [info ] [MainThread]:   proxy_host: None
+[0m18:20:39.040876 [info ] [MainThread]:   proxy_port: None
+[0m18:20:39.041113 [info ] [MainThread]:   protocol: None
+[0m18:20:39.041444 [info ] [MainThread]:   connect_retries: 1
+[0m18:20:39.041811 [info ] [MainThread]:   connect_timeout: None
+[0m18:20:39.042115 [info ] [MainThread]:   retry_on_database_errors: False
+[0m18:20:39.042390 [info ] [MainThread]:   retry_all: False
+[0m18:20:39.042657 [info ] [MainThread]:   insecure_mode: False
+[0m18:20:39.042906 [info ] [MainThread]:   reuse_connections: True
+[0m18:20:39.043155 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m18:20:39.043413 [info ] [MainThread]:   workload_identity_provider: None
+[0m18:20:39.043664 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m18:20:39.043908 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m18:20:39.044489 [info ] [MainThread]: Registered adapter: snowflake=1.12.1
+[0m18:20:39.325655 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m18:20:39.328142 [debug] [MainThread]: Using snowflake connection "debug"
+[0m18:20:39.328479 [debug] [MainThread]: On debug: select 1 as id
+[0m18:20:39.328717 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:20:40.651974 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.323 seconds
+[0m18:20:40.657066 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:20:40.659390 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:20:40.661456 [info ] [MainThread]: Your new dbt project "oms_prj" was created!
+Initialized new project in C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\oms_prj\oms_prj
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:20:40.667107 [debug] [MainThread]: Command `dbt init` succeeded at 18:20:40.666186 after 165.61 seconds
+[0m18:20:40.668760 [debug] [MainThread]: Connection 'debug' was left open.
+[0m18:20:40.670208 [debug] [MainThread]: On debug: Close
+[0m18:20:40.737679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BDEABAB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE0B1B9B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE09F8050>]}
+[0m18:20:40.740580 [debug] [MainThread]: Flushing usage events
+[0m18:20:41.750665 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:22:04.114452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A3BC36CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A399C8E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A3E7BF9D0>]}
+
+
+============================== 18:22:04.141290 | 18671ff6-b618-44ec-a54f-53aa983b6c6f ==============================
+[0m18:22:04.141290 [info ] [MainThread]: Running with dbt=1.12.5
+[0m18:22:04.142636 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Sam MSI\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m18:22:04.169481 [info ] [MainThread]: dbt version: 1.12.5
+[0m18:22:04.170001 [info ] [MainThread]: python version: 3.14.7
+[0m18:22:04.170377 [info ] [MainThread]: python path: C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_venv\Scripts\python.exe
+[0m18:22:04.170669 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m18:22:04.702843 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:22:04.703329 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:22:04.703656 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:22:04.829572 [info ] [MainThread]: Using profiles dir at C:\Users\Sam MSI\.dbt
+[0m18:22:04.830230 [info ] [MainThread]: Using profiles.yml file at C:\Users\Sam MSI\.dbt\profiles.yml
+[0m18:22:04.830824 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_project.yml
+[0m18:22:04.832086 [info ] [MainThread]: adapter type: snowflake
+[0m18:22:04.832503 [info ] [MainThread]: adapter version: 1.12.1
+[0m18:22:04.832909 [info ] [MainThread]: Configuration:
+[0m18:22:04.833251 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:22:04.833581 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:22:04.833887 [info ] [MainThread]: Required dependencies:
+[0m18:22:04.834216 [debug] [MainThread]: Executing "git --help"
+[0m18:22:04.906937 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:22:04.907854 [debug] [MainThread]: STDERR: "b''"
+[0m18:22:04.908629 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:22:04.909320 [info ] [MainThread]: Connection:
+[0m18:22:04.910495 [info ] [MainThread]:   account: ZOUAUHW-IJ51040
+[0m18:22:04.911102 [info ] [MainThread]:   user: samuel.auditama@gmail.com
+[0m18:22:04.911656 [info ] [MainThread]:   database: SLEEKMART_OMS
+[0m18:22:04.912184 [info ] [MainThread]:   warehouse: SNOWFLAKE_LEARNING_WH
+[0m18:22:04.912741 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m18:22:04.913188 [info ] [MainThread]:   schema: L3_CONSUMPTION
+[0m18:22:04.913640 [info ] [MainThread]:   authenticator: None
+[0m18:22:04.914059 [info ] [MainThread]:   oauth_client_id: None
+[0m18:22:04.914741 [info ] [MainThread]:   query_tag: None
+[0m18:22:04.916992 [info ] [MainThread]:   client_session_keep_alive: False
+[0m18:22:04.919980 [info ] [MainThread]:   host: None
+[0m18:22:04.922752 [info ] [MainThread]:   port: None
+[0m18:22:04.925944 [info ] [MainThread]:   proxy_host: None
+[0m18:22:04.928275 [info ] [MainThread]:   proxy_port: None
+[0m18:22:04.929532 [info ] [MainThread]:   protocol: None
+[0m18:22:04.931404 [info ] [MainThread]:   connect_retries: 1
+[0m18:22:04.933672 [info ] [MainThread]:   connect_timeout: None
+[0m18:22:04.935920 [info ] [MainThread]:   retry_on_database_errors: False
+[0m18:22:04.938185 [info ] [MainThread]:   retry_all: False
+[0m18:22:04.939279 [info ] [MainThread]:   insecure_mode: False
+[0m18:22:04.939864 [info ] [MainThread]:   reuse_connections: True
+[0m18:22:04.940398 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m18:22:04.941241 [info ] [MainThread]:   workload_identity_provider: None
+[0m18:22:04.941717 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m18:22:04.942390 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m18:22:04.943297 [info ] [MainThread]: Registered adapter: snowflake=1.12.1
+[0m18:22:05.161482 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m18:22:05.164153 [debug] [MainThread]: Using snowflake connection "debug"
+[0m18:22:05.164525 [debug] [MainThread]: On debug: select 1 as id
+[0m18:22:05.164828 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:22:05.826901 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.662 seconds
+[0m18:22:05.829144 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:22:05.829907 [info ] [MainThread]: [31m1 check failed:[0m
+[0m18:22:05.830662 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Sam MSI\Documents\Study\Independent\DBT\OMS Sleek Data\dbt_workspace\dbt_project.yml> not found
+
+[0m18:22:05.832512 [debug] [MainThread]: Command `dbt debug` failed at 18:22:05.832116 after 2.37 seconds
+[0m18:22:05.833571 [debug] [MainThread]: Connection 'debug' was left open.
+[0m18:22:05.834086 [debug] [MainThread]: On debug: Close
+[0m18:22:05.917568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A404B9350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A396F4A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A40645260>]}
+[0m18:22:05.921313 [debug] [MainThread]: Flushing usage events
+[0m18:22:06.998048 [debug] [MainThread]: An error was encountered while trying to flush usage events
